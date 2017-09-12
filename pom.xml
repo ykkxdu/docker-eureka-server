@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<docke.registry>192.168.0.249:5000</docke.registry>
 		<spring-cloud.version>Dalston.SR3</spring-cloud.version>
 	</properties>
 
@@ -61,8 +62,9 @@
 				<configuration>
 					<!-- 注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
 					<!-- 详见：https://github.com/spotify/docker-maven-plugin    Invalid repository name ... only [a-z0-9-_.] are allowed-->
-					<imageName>ykkxdu/docker-eureka-server:0.0.1</imageName>
+					<imageName>ykkxdu/docker-eureka-server</imageName>
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<pushImage>true</pushImage>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>

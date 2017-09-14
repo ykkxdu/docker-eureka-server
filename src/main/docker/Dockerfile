@@ -1,7 +1,6 @@
 #基于那个镜像
 FROM java:8
 VOLUME /tmp
-#复制文件到容器中
 #ADD docker-eureka-server-0.0.1-SNAPSHOT.jar app.jar
 RUN bash -c 'touch /app.jar'
 #声明需要暴露的端口

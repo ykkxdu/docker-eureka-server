@@ -1,7 +1,8 @@
 #基于那个镜像
 FROM java:8
 VOLUME /tmp
-ADD wget https://github.com/ykkxdu/docker-eureka-server.git app.jar
+RUN wget https://github.com/ykkxdu/docker-eureka-server.git  docker-eureka-server-0.0.1-SNAPSHOT.jar
+ADD  docker-eureka-server-0.0.1-SNAPSHOT.jar app.jar
 RUN bash -c 'touch /app.jar'
 #声明需要暴露的端口
 EXPOSE 8672

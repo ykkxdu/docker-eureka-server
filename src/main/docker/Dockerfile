@@ -1,4 +1,4 @@
-#基于那个镜像
+#基于那个
 FROM java:8
 RUN mkdir /app
 WORKDIR /app
